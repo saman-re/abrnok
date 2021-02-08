@@ -1,9 +1,10 @@
-import SignUp from "./components/SignUp";
-import SignIn from "./components/SignIn";
-import NewServer from "./components/NewServer";
+import SignUp from "./views/SignUp";
+import SignIn from "./views/SignIn";
+import NewServer from "./views/NewServer";
 
 export const routes = [
-  { path: "/", component: SignIn },
-  { path: "/Sign_up", component: SignUp },
+  { path: "/", component: SignIn, name: "home" },
+  { path: "/sign_up", component: SignUp },
   { path: "/new_server", component: NewServer },
+  { path: "*", redirect: { name: "home" } },
 ];
