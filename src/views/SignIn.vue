@@ -10,20 +10,24 @@
         <v-col cols="12">
           <v-text-field
             label="Email"
+            prepend-inner-icon="mdi-email"
             placeholder="Type your Email"
             outlined
             v-model="form.email"
+            autocomplete="off"
           ></v-text-field>
         </v-col>
         <v-col cols="12">
           <v-text-field
             label="Password"
+            prepend-inner-icon="mdi-lock"
             placeholder="Type your Password"
             outlined
             v-model="form.password"
             :append-icon="showPass ? 'mdi-eye' : 'mdi-eye-off'"
             :type="showPass ? 'text' : 'password'"
             @click:append="showPass = !showPass"
+            autocomplete="off"
           ></v-text-field>
           <!-- <v-card-subtitle class="text-end ma-0 pt-0 pr-0">
           <span>
@@ -62,10 +66,12 @@ export default {
   },
   methods: {
     signIn() {
+      console.log(this.form);
       axios
         .post("http://45.147.231.127:8000/auth/new-token", this.form)
         .then((res) => {
           console.log(res);
+          if(res.status==200){this.$router.push('/new_server')}
         });
     },
   },
