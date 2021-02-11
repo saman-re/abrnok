@@ -92,6 +92,7 @@ export default {
   data() {
     return {
       showPass: false,
+      loading:false,
       form: {
         full_name: "",
         email: "",
@@ -112,19 +113,26 @@ export default {
   },
   methods: {
     signUp() {
+      this.loading=true
       if (this.form.password == this.reTypePass) {
         axios
           .post("http://45.147.231.127:8000/auth/register", this.form)
           .then((res) => {
+            this.loading=false;
             console.log(res);
             if (res.status == 200) {
               this.$router.push("/new_server");
-            }else if(res.status==409){
+            }
+          })
+          .catch(error=>{
+            if(error.response.status==409){
+                this.loading=false
                 this.alerts[1].show=true;
             }
-          });
+          })
       } else {
-        console.log("pas!");
+        console.log("password!");
+        this.loading=false;
         this.alerts[0].show = true;
       }
     },
