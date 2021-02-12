@@ -11,8 +11,8 @@
       <v-icon>mdi-menu</v-icon>
     </v-btn>
     <v-app-bar-title class="text-no-wrap px-0">
-      <v-btn plain class="grey lighten-1 rounded-pill">
-        <v-icon class="yellow--text text--lighten-3" large href="">mdi-cloud</v-icon>
+      <v-btn plain class="grey lighten-1 rounded-pill" href="https://abrnoc.com/">
+        <v-icon class="yellow--text text--lighten-3" large>mdi-cloud</v-icon>
         <span class="text-subtitle1 font-weight-black red--text text--lighten-1"
           >N</span
         >

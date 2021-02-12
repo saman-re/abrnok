@@ -9,9 +9,7 @@ export const store=new Vuex.Store({
     },
     mutations:{
         navSwitch(state,payload){
-            console.log('befor',state.navShow);
             state.navShow=payload;
-            console.log('after',state.navShow);
         }
     }
 })
