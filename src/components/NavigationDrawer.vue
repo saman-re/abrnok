@@ -19,10 +19,9 @@
 
 <script>
 export default {
-    props:['navShow'],
     data(){
         return{
-            navDrawer:this.navShow,
+            // navDrawer:this.$store.state.navShow,
         listItems:[
             {
                 icon:'circle',
@@ -42,6 +41,16 @@ export default {
             },
         ]
         }
-    }
+    },
+    computed:{
+      navDrawer:{
+        get(){
+          return this.$store.state.navShow;
+        },
+        set(value){
+          this.$store.commit('navSwitch',value)
+        }
+      }
+    } 
 }
 </script>

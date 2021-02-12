@@ -1,8 +1,8 @@
 <template>
   <div>
-    <app-nav-drawer :navShow="navDrawer"></app-nav-drawer>
+    <app-nav-drawer></app-nav-drawer>
     <app-choose-server></app-choose-server>
-    <v-row> </v-row>
+    <v-row></v-row>
   </div>
 </template>
 <script>
@@ -11,7 +11,6 @@ import ChooseServer from '../components/New Server/ChooseServer'
 export default {
   data() {
     return {
-      navDrawer: true,
     };
   },
   components: {
