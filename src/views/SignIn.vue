@@ -28,6 +28,8 @@
               outlined
               v-model="form.email"
               autocomplete="off"
+              :rules="[rules.required, rules.email]"
+              clearable
             ></v-text-field>
           </v-col>
           <v-col cols="12">
@@ -41,6 +43,7 @@
               :type="showPass ? 'text' : 'password'"
               @click:append="showPass = !showPass"
               autocomplete="off"
+              :rules="[rules.required]"
             ></v-text-field>
             <!-- <v-card-subtitle class="text-end ma-0 pt-0 pr-0">
           <span>
@@ -51,7 +54,13 @@
         </v-row>
         <v-row class="pa-2 ma-0">
           <v-col cols="12">
-            <v-btn @click="signIn" color="primary" block tile :disabled="false" :loading="loading"
+            <v-btn
+              @click="signIn"
+              color="primary"
+              block
+              tile
+              :disabled="btnEnable&&(this.form.email&&this.form.password)"
+              :loading="loading"
               >Submit</v-btn
             >
           </v-col>
@@ -83,10 +92,24 @@ export default {
       },
       alerts: [
         {
-          message: "",
+          message: "your password is not correct",
+          show: false,
+        },
+        {
+          message: "your email doesnt exist",
           show: false,
         },
       ],
+      btnEnable:true,
+      rules: {
+        required: (value) => !!value || "Required.",
+        counter: (value) => value.length <= 20 || "Max 20 characters",
+        email: (value) => {
+          const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          this.btnEnable= !pattern.test(value)
+          return pattern.test(value) || "Invalid e-mail.";
+        },
+      },
     };
   },
   methods: {
@@ -103,13 +126,11 @@ export default {
         })
         .catch((error) => {
           this.loading = false;
-          console.log(error.response);
-          if (error.response.status == 401) {
-            this.alerts[0].message = "your password is not correct";
+          // console.log(error.response);
+          if (error.response.status == 401&&this.form.password) {
             this.alerts[0].show = true;
           } else if (error.response.status == 500) {
-            this.alerts[0].message = "your email doesnt exist";
-            this.alerts[0].show = true;
+            this.alerts[1].show = true;
           }
         });
     },

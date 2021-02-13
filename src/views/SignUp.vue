@@ -28,6 +28,8 @@
               outlined
               v-model="form.full_name"
               autocomplete="off"
+              :rules="[rules.required]"
+              clearable
             ></v-text-field>
           </v-col>
           <v-col cols="12">
@@ -38,6 +40,8 @@
               outlined
               v-model="form.email"
               autocomplete="off"
+              :rules="[rules.required, rules.email]"
+              clearable
             ></v-text-field>
           </v-col>
           <v-col cols="12">
@@ -51,6 +55,7 @@
               :type="showPass ? 'text' : 'password'"
               @click:append="showPass = !showPass"
               autocomplete="off"
+              :rules="[rules.required]"
             ></v-text-field>
           </v-col>
           <v-col cols="12">
@@ -64,6 +69,7 @@
               :type="showPass ? 'text' : 'password'"
               @click:append="showPass = !showPass"
               autocomplete="off"
+              :rules="[rules.required]"
             ></v-text-field>
           </v-col>
         </v-row>
@@ -92,7 +98,7 @@ export default {
   data() {
     return {
       showPass: false,
-      loading:false,
+      loading: false,
       form: {
         full_name: "",
         email: "",
@@ -105,34 +111,42 @@ export default {
           show: false,
         },
         {
-            message:"Email already exists",
-            show:false
-        }
+          message: "Email already exists",
+          show: false,
+        },
       ],
+      rules: {
+        required: (value) => !!value || "Required.",
+        counter: (value) => value.length <= 20 || "Max 20 characters",
+        email: (value) => {
+          const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return pattern.test(value) || "Invalid e-mail.";
+        },
+      },
     };
   },
   methods: {
     signUp() {
-      this.loading=true
+      this.loading = true;
       if (this.form.password == this.reTypePass) {
         axios
           .post("http://45.147.231.127:8000/auth/register", this.form)
           .then((res) => {
-            this.loading=false;
+            this.loading = false;
             console.log(res);
             if (res.status == 200) {
               this.$router.push("/new_server");
             }
           })
-          .catch(error=>{
-            if(error.response.status==409){
-                this.loading=false
-                this.alerts[1].show=true;
+          .catch((error) => {
+            if (error.response.status == 409) {
+              this.loading = false;
+              this.alerts[1].show = true;
             }
-          })
+          });
       } else {
         console.log("password!");
-        this.loading=false;
+        this.loading = false;
         this.alerts[0].show = true;
       }
     },
