@@ -1,5 +1,5 @@
 <template>
-    <div>
-        <h1>server location</h1>
-    </div>
+  <v-row class="mx-4 mt-7">
+    <v-col cols="12" class="display-1"> Server Location </v-col>
+  </v-row>
 </template>

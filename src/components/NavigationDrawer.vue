@@ -2,7 +2,7 @@
     <v-navigation-drawer app v-model="navDrawer" clipped width="90px" class="blue darken-3 container px-0">
       <v-list>
         <v-list-item class="container px-0" v-for="(listItem,index) in listItems" :key="index">
-          <v-card flat width="100%" class="blue darken-3">
+          <v-card flat width="100%" class="blue darken-3 mb-4" style="cursor:pointer" link :to="{hash:`#${listItem.subtitle}`}">
             <v-card-text class="text-center pb-0">
             <v-icon x-large class="white--text">
               {{listItem.icon}}
@@ -24,19 +24,19 @@ export default {
         listItems:[
             {
                 icon:'storage',
-                subtitle:'server'
+                subtitle:'Type'
             },
             {
                 icon:'public',
-                subtitle:'location'
+                subtitle:'Location'
             },
             {
                 icon:'window',
-                subtitle:'type'
+                subtitle:'OS'
             },
             {
                 icon:'sd_card',
-                subtitle:'size'
+                subtitle:'Size'
             },
         ]
         }

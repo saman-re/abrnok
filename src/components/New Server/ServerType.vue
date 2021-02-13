@@ -1,6 +1,6 @@
 <template>
   <v-row class="mx-4 mt-7">
-    <v-col cols="12" class="display-1"> Choose Server </v-col>
+    <v-col cols="12" class="display-1"> Server Type </v-col>
     <v-col
       cols="12"
       lg="3"
