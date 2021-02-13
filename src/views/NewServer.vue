@@ -1,5 +1,6 @@
 <template>
   <div>
+    <app-dialog></app-dialog>
     <app-nav-drawer></app-nav-drawer>
     <app-server-type id="Type"></app-server-type>
     <app-server-location id="Location"></app-server-location>
@@ -13,7 +14,8 @@ import NavigationDrawer from "../components/NavigationDrawer";
 import ServerType from '../components/New Server/ServerType';
 import ServerLocation from '../components/New Server/ServerLocation';
 import ServerOS from '../components/New Server/ServerSize';
-import ServerSize from '../components/New Server/ServerSize'
+import ServerSize from '../components/New Server/ServerSize';
+import ProfileDialog from '../components/ProfileDialog';
 export default {
   data() {
     return {
@@ -24,7 +26,8 @@ export default {
     "app-server-type":ServerType,
     "app-server-location":ServerLocation,
     "app-server-OS":ServerOS,
-    "app-server-size":ServerSize
+    "app-server-size":ServerSize,
+    "app-dialog":ProfileDialog,
   },
 };
 </script>

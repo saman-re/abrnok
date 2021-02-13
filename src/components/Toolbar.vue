@@ -27,7 +27,7 @@
       </v-btn>
     </v-app-bar-title>
     <v-spacer></v-spacer>
-    <v-btn icon class="mr-1" v-show="accountBtn">
+    <v-btn icon class="mr-1" v-show="accountBtn" @click="$store.commit('profDialogSwitch',true)">
       <v-badge color="deep-orange accent-4" bottom dot overlap v-if="true">
         <v-icon class="blue--text text--darken-4">mdi-account-circle</v-icon>
       </v-badge>
