@@ -119,7 +119,7 @@ export default {
         .post("http://45.147.231.127:8000/auth/new-token", this.form)
         .then((res) => {
           this.loading = false;
-          console.log(res);
+          console.log(res.data);
           if (res.status == 200) {
             this.$router.push("/new_server");
           }

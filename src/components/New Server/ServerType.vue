@@ -14,24 +14,12 @@
   </v-row>
 </template>
 <script>
-import ServerCard from './ServerCard';
+import ServerCard from './cards/ServerCard';
+import {serversType} from '../../assets/ServerDependencies'
 export default {
   data() {
     return {
-      servers: [
-        {
-          title: "Cloud Compute",
-        },
-        {
-          title: "High Frequency",
-        },
-        {
-          title: "Bare Metal",
-        },
-        {
-          title: "Dedicated Cloud ",
-        },
-      ],
+      servers:serversType,
     };
   },
   components:{
