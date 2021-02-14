@@ -16,9 +16,9 @@ export const serversType = [
     image: "Dedicated_Cloud.83e511ec.svg",
   },
 ];
-//Europe NorthAmerica
-export const serverLocations = [
-  [
+
+export const serverLocations = {
+  northAmerica:[
     {
       location: "Atlanta",
       country: "United States",
@@ -50,7 +50,7 @@ export const serverLocations = [
       image: "Dallas.da9240d0.svg",
     },
   ],
-  [
+  europe:[
     {
       location: "Amestrdam",
       country: "Netherlands",
@@ -72,7 +72,7 @@ export const serverLocations = [
       image: "Paris.5c0fa787.svg",
     },
   ],
-  [
+  asia:[
     {
       location: "Tokyo",
       country: "Japan",
@@ -89,14 +89,14 @@ export const serverLocations = [
       image: "Singapore.82e95bbe.svg",
     },
   ],
-  [
+  australia:[
     {
       location: "Sydney",
       country: "Australia",
       image: "Sydney.8cc2226f.svg",
     },
   ],
-];
+};
 
 export const serversConfig = [
   {

@@ -32,7 +32,7 @@
               lg="3"
               md="4"
               sm="6"
-              v-for="(server, index) in servers[4]"
+              v-for="(server, index) in allLocations"
               :key="index"
             >
               <app-location-card :server="server"></app-location-card>
@@ -46,7 +46,7 @@
               lg="3"
               md="4"
               sm="6"
-              v-for="(server, index) in servers[0]"
+              v-for="(server, index) in servers.northAmerica"
               :key="index"
             >
               <app-location-card :server="server"></app-location-card>
@@ -60,7 +60,7 @@
               lg="3"
               md="4"
               sm="6"
-              v-for="(server, index) in servers[1]"
+              v-for="(server, index) in servers.europe"
               :key="index"
             >
               <app-location-card :server="server"></app-location-card>
@@ -74,7 +74,7 @@
               lg="3"
               md="4"
               sm="6"
-              v-for="(server, index) in servers[2]"
+              v-for="(server, index) in servers.asia"
               :key="index"
             >
               <app-location-card :server="server"></app-location-card>
@@ -87,7 +87,7 @@
               lg="3"
               md="4"
               sm="6"
-              v-for="(server, index) in servers[3]"
+              v-for="(server, index) in servers.australia"
               :key="index"
             >
               <app-location-card :server="server"></app-location-card>
@@ -106,7 +106,15 @@ export default {
     return {
       tabs: null,
       servers: serverLocations,
+      allLocations: [],
     };
+  },
+  created() {
+    for (let loc in serverLocations) {
+      serverLocations[loc].forEach((value) => {
+        this.allLocations.push(value);
+      });
+    }
   },
   components: {
     "app-location-card": LocationCard,
