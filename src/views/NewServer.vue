@@ -5,7 +5,7 @@
     <app-server-type id="Type" class="pt-15"></app-server-type>
     <app-server-location id="Location" class="pt-15"></app-server-location>
     <app-server-OS id="OS" class="pt-15"></app-server-OS>
-    <app-server-config id="Size" class="pt-15"></app-server-config>
+    <app-server-config id="Config" class="pt-15"></app-server-config>
   </div>
 </template>
 <script>

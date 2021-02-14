@@ -1,8 +1,7 @@
 <template>
   <v-row class="mx-4 mt-7">
     <v-col cols="12" class="display-1"> Server OS </v-col>
-    <v-col
-      
+    <v-col 
       lg="2"
       md="2"
       sm="3"
