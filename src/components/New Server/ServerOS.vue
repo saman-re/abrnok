@@ -2,10 +2,11 @@
   <v-row class="mx-4 mt-7">
     <v-col cols="12" class="display-1"> Server OS </v-col>
     <v-col
-      cols="12"
-      lg="3"
-      md="4"
-      sm="6"
+      
+      lg="2"
+      md="2"
+      sm="3"
+      xs="6"
       v-for="(serverOS, index) in serverOSs"
       :key="index"
     >

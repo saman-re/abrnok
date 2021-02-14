@@ -136,26 +136,26 @@ export const serversConfig = [
 export const serverOSs = [
   {
     name: "Cent OS",
-    image: "",
+    image: "CentOS.3417b9d4.svg",
   },
   {
     name: "Fedora Core OS",
-    image: "",
+    image: "Fedora_CoreOS.82167d15.svg",
   },
   {
     name: "Debian",
-    image: "",
+    image: "Debian.71bb6e54.svg",
   },
   {
     name: "Fedora",
-    image: "",
+    image: "Fedora.91a58d5a.svg",
   },
   {
     name: "Ubunto",
-    image: "",
+    image: "Ubunto.d0c49d42.svg",
   },
   {
     name: "Windows",
-    image: "",
+    image: "Windows.efea2143.svg",
   },
 ];
