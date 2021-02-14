@@ -12,156 +12,119 @@ export const serversType = [
     title: "Dedicated Cloud ",
   },
 ];
-
+//Europe NorthAmerica
 export const serverLocations = [
   [
     {
       location: "Atlanta",
       country: "United States",
-      image: "",
+      image: "Atlanta.c3b74290.svg",
     },
     {
       location: "Los Angeles",
       country: "United States",
-      image: "",
+      image: "Los_Angeles.7a9785b5.svg",
     },
     {
       location: "Torento",
       country: "Canada",
-      image: "",
+      image: "Toronto.7b0c3bd9.svg",
     },
     {
-      location: "Silicon vally",
+      location: "Silicon Valley",
       country: "United States",
-      image: "",
+      image: "Silicon_Valley.a976633f.svg",
     },
     {
       location: "New jersey",
       country: "United States",
-      image: "",
+      image: "New_Jersey.10e37975.svg",
     },
     {
       location: "Dallas",
       country: "United States",
-      image: "",
+      image: "Dallas.da9240d0.svg",
     },
   ],
   [
     {
       location: "Amestrdam",
       country: "Netherlands",
-      image: "",
+      image: "Amsterdam.d21c22d3.svg",
     },
     {
       location: "London",
       country: "United Kingdom",
-      image: "",
+      image: "London.63dd7bcd.svg",
     },
     {
       location: "Frankfurt",
       country: "Germany",
-      image: "",
+      image: "Frankfurt.8e28ee09.svg",
     },
     {
       location: "Paris",
       country: "France",
-      image: "",
+      image: "Paris.5c0fa787.svg",
     },
   ],
   [
     {
       location: "Tokyo",
       country: "Japan",
-      image: "",
+      image: "Tokyo.5eeed999.svg",
     },
     {
       location: "Seoul",
       country: "Korea,Republic of",
-      image: "",
+      image: "Seoul.208c0c91.svg",
     },
     {
       location: "Singapore",
       country: "Singapore",
-      image: "",
+      image: "Singapore.82e95bbe.svg",
     },
   ],
   [
     {
       location: "Sydney",
       country: "Australia",
-      image: "",
+      image: "Sydney.8cc2226f.svg",
     },
   ],
-  [
-    {
-      location: "Atlanta",
-      country: "United States",
-      image: "",
-    },
-    {
-      location: "Los Angeles",
-      country: "United States",
-      image: "",
-    },
-    {
-      location: "Torento",
-      country: "Canada",
-      image: "",
-    },
-    {
-      location: "Silicon vally",
-      country: "United States",
-      image: "",
-    },
-    {
-      location: "New jersey",
-      country: "United States",
-      image: "",
-    },
-    {
-      location: "Dallas",
-      country: "United States",
-      image: "",
-    },
-    {
-      location: "Amestrdam",
-      country: "Netherlands",
-      image: "",
-    },
-    {
-      location: "London",
-      country: "United Kingdom",
-      image: "",
-    },
-    {
-      location: "Frankfurt",
-      country: "Germany",
-      image: "",
-    },
-    {
-      location: "Paris",
-      country: "France",
-      image: "",
-    },
-    {
-      location: "Tokyo",
-      country: "Japan",
-      image: "",
-    },
-    {
-      location: "Seoul",
-      country: "Korea,Republic of",
-      image: "",
-    },
-    {
-      location: "Singapore",
-      country: "Singapore",
-      image: "",
-    },  
-    {
-      location: "Sydney",
-      country: "Australia",
-      image: "",
-    },
-  ]
+];
+
+export const serversConfig = [
+  {
+    ssd: "120 GB",
+    memory: "8192MB",
+    cpu: 2,
+    bandwidth: "10TB",
+    priceP_M: 60,
+    priceP_H: 0.089,
+  },
+  {
+    ssd: "2 X 120 GB",
+    memory: 16384,
+    cpu: 4,
+    bandwidth: "20TB",
+    priceP_M: 120,
+    priceP_H: 0.179,
+  },
+  {
+    ssd: "3 X 120 GB",
+    memory: 24576,
+    cpu: 6,
+    bandwidth: "30TB",
+    priceP_M: 180,
+    priceP_H: 0.268,
+  },
+  {
+    ssd: "4 X 120 GB",
+    memory: "32768 MB",
+    cpu: 8,
+    bandwidth: "40TB",
+    priceP_M: 240,
+    priceP_H: 0.357,
+  },
 ];

@@ -36,7 +36,7 @@ export default {
             },
             {
                 icon:'sd_card',
-                subtitle:'Size'
+                subtitle:'Config'
             },
         ]
         }

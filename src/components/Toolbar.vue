@@ -7,11 +7,20 @@
     elevate-on-scroll
     clipped-left
   >
-    <v-btn plain icon class="hidden-lg-and-up" @click="$store.commit('navSwitch',true)">
+    <v-btn
+      plain
+      icon
+      class="hidden-lg-and-up"
+      @click="$store.commit('navSwitch', true)"
+    >
       <v-icon>mdi-menu</v-icon>
     </v-btn>
     <v-app-bar-title class="text-no-wrap px-0">
-      <v-btn plain class="grey lighten-1 rounded-pill" href="https://abrnoc.com/">
+      <v-btn
+        plain
+        class="grey lighten-1 rounded-pill"
+        href="https://abrnoc.com/"
+      >
         <v-icon class="yellow--text text--lighten-3" large>mdi-cloud</v-icon>
         <span class="text-subtitle1 font-weight-black red--text text--lighten-1"
           >N</span
@@ -27,7 +36,12 @@
       </v-btn>
     </v-app-bar-title>
     <v-spacer></v-spacer>
-    <v-btn icon class="mr-1" v-show="accountBtn" @click="$store.commit('profDialogSwitch',true)">
+    <v-btn
+      icon
+      class="mr-1"
+      v-show="accountBtn"
+      @click="$store.commit('profDialogSwitch', true)"
+    >
       <v-badge color="deep-orange accent-4" bottom dot overlap v-if="true">
         <v-icon class="blue--text text--darken-4">mdi-account-circle</v-icon>
       </v-badge>
@@ -54,43 +68,43 @@ export default {
   },
   watch: {
     $route(to) {
-        const path = to.path;
-       if (path == "/new_server") {
-          this.btnTxt = "sign out";
-          this.btnIcon = "mdi-logout";
-          this.btnAdd = "/";
-          this.accountBtn = true;
-        } else if (path == "/sign_up") {
-          this.btnTxt = "sign in";
-          this.btnIcon = "mdi-login";
-          this.btnAdd = "/";
-          this.accountBtn = false;
-        } else {
-          this.btnTxt = "sign up";
-          this.btnIcon = "mdi-login";
-          this.btnAdd = "/sign_up";
-          this.accountBtn = false;
-        }
+      const path = to.path;
+      if (path == "/new_server") {
+        this.btnTxt = "sign out";
+        this.btnIcon = "mdi-logout";
+        this.btnAdd = "/";
+        this.accountBtn = true;
+      } else if (path == "/sign_up") {
+        this.btnTxt = "sign in";
+        this.btnIcon = "mdi-login";
+        this.btnAdd = "/";
+        this.accountBtn = false;
+      } else {
+        this.btnTxt = "sign up";
+        this.btnIcon = "mdi-login";
+        this.btnAdd = "/sign_up";
+        this.accountBtn = false;
+      }
     },
   },
-  created(){
-      const path =this.$route.path;
-       if (path == "/new_server") {
-          this.btnTxt = "sign out";
-          this.btnIcon = "mdi-logout";
-          this.btnAdd = "/";
-          this.accountBtn = true;
-        } else if (path == "/sign_up") {
-          this.btnTxt = "sign in";
-          this.btnIcon = "mdi-login";
-          this.btnAdd = "/";
-          this.accountBtn = false;
-        } else {
-          this.btnTxt = "sign up";
-          this.btnIcon = "mdi-login";
-          this.btnAdd = "/sign_up";
-          this.accountBtn = false;
-        }
-    },
+  created() {
+    const path = this.$route.path;
+    if (path == "/new_server") {
+      this.btnTxt = "sign out";
+      this.btnIcon = "mdi-logout";
+      this.btnAdd = "/";
+      this.accountBtn = true;
+    } else if (path == "/sign_up") {
+      this.btnTxt = "sign in";
+      this.btnIcon = "mdi-login";
+      this.btnAdd = "/";
+      this.accountBtn = false;
+    } else {
+      this.btnTxt = "sign up";
+      this.btnIcon = "mdi-login";
+      this.btnAdd = "/sign_up";
+      this.accountBtn = false;
+    }
+  },
 };
 </script>

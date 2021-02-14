@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export const store=new Vuex.Store({
     state:{
-        navShow:false,
+        navShow:true,
         dialogShow:false
     },
     mutations:{
