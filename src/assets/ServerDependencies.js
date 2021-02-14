@@ -1,15 +1,19 @@
 export const serversType = [
   {
     title: "Cloud Compute",
+    image: "Cloud_Compute.c75d6e60.svg",
   },
   {
-    title: "High Frequency",
+    title: "Block Storage",
+    image: "Block_Storage.dbfce09d.svg",
   },
   {
     title: "Bare Metal",
+    image: "Bare_Metal.3562ac11.svg",
   },
   {
-    title: "Dedicated Cloud ",
+    title: "Dedicated Cloud",
+    image: "Dedicated_Cloud.83e511ec.svg",
   },
 ];
 //Europe NorthAmerica
@@ -126,5 +130,32 @@ export const serversConfig = [
     bandwidth: "40TB",
     priceP_M: 240,
     priceP_H: 0.357,
+  },
+];
+
+export const serverOSs = [
+  {
+    name: "Cent OS",
+    img: "",
+  },
+  {
+    name: "Fedora Core OS",
+    img: "",
+  },
+  {
+    name: "Debian",
+    img: "",
+  },
+  {
+    name: "Fedora",
+    img: "",
+  },
+  {
+    name: "Ubunto",
+    img: "",
+  },
+  {
+    name: "Windows",
+    img: "",
   },
 ];

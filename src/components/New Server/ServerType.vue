@@ -9,7 +9,7 @@
       v-for="(server, index) in servers"
       :key="index"
     >
-    <app-server-card :server="server"></app-server-card>
+    <app-server-card :server="server" style="width:100%"></app-server-card>
     </v-col>
   </v-row>
 </template>

@@ -2,10 +2,10 @@
   <div>
     <app-dialog></app-dialog>
     <app-nav-drawer></app-nav-drawer>
-    <app-server-type id="Type" class="pt-15"></app-server-type>
-    <app-server-location id="Location" class="pt-15"></app-server-location>
-    <app-server-OS id="OS" class="pt-15"></app-server-OS>
-    <app-server-config id="Size" class="pt-15"></app-server-config>
+    <app-server-type id="Type" class="pt-17"></app-server-type>
+    <app-server-location id="Location" class="pt-17"></app-server-location>
+    <app-server-OS id="OS" class="pt-17"></app-server-OS>
+    <app-server-config id="Size" class="pt-17"></app-server-config>
     <v-row></v-row>
   </div>
 </template>
