@@ -26,6 +26,9 @@ export const store=new Vuex.Store({
         },
         changeLocation(state,payload){
             state.server.location=payload
+        },
+        changeOS(state,payload){
+            state.server.os=payload
         }
     }
 })
