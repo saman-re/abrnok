@@ -11,7 +11,12 @@ export const store=new Vuex.Store({
             type:'',
             location:'',
             os:'',
-            config:'',
+            config:{
+                // cpu:NaN,
+                // memory:NaN,
+                // bandwidth:'',
+                // ssd:''
+            },
         }
     },
     mutations:{
@@ -29,6 +34,14 @@ export const store=new Vuex.Store({
         },
         changeOS(state,payload){
             state.server.os=payload
+        },
+        changeConfig(state,payload){
+            state.server.config=payload
+            // state.server.config.cpu=payload.cpu;
+            // state.server.config.memory=payload.memory;
+            // state.server.config.bandwidth=payload.bandwidth;
+            // state.server.config.ssd=payload.ssd;
+            // console.log(state.config);
         }
     }
 })

@@ -4,9 +4,13 @@
     :elevation="cardEval"
     @mousemove="cardEval = 15"
     @mouseleave="cardEval = 2"
+    @click="changeConfig"
     class="py-6"
     style="cursor:pointer"
   >
+    <v-icon class="green--text" v-show="config == serverConfig">
+      check_circle
+    </v-icon>
     <v-card-text
       class="pb-0 text-center black--text font-weight-bold text-button"
       >{{ config.ssd }}</v-card-text
@@ -53,6 +57,16 @@ export default {
     return {
       cardEval: 2,
     };
+  },
+  methods: {
+    changeConfig() {
+      this.$store.commit("changeConfig",this.config);
+    },
+  },
+  computed: {
+    serverConfig() {
+      return this.$store.state.server.config;
+    },
   },
 };
 </script>
