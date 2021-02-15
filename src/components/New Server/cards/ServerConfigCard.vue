@@ -67,6 +67,7 @@ export default {
     serverConfig() {
       return this.$store.state.server.config;
     },
+
   },
 };
 </script>

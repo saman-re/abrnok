@@ -7,6 +7,12 @@ export const store=new Vuex.Store({
     state:{
         navShow:true,
         dialogShow:false,
+        profile:{
+            email:'',
+            userName:'',
+            emailVerified:false,
+            token:'',
+        },
         server:{
             type:'',
             location:'',
@@ -42,6 +48,12 @@ export const store=new Vuex.Store({
             // state.server.config.bandwidth=payload.bandwidth;
             // state.server.config.ssd=payload.ssd;
             // console.log(state.config);
+        },
+        profileSet(state,payload){
+            state.profile.email=payload.user.email;
+            state.profile.userName=payload.user.full_name;
+            state.profile.emailVerified=payload.user.is_email_verified;
+            state.profile.token=payload.token
         }
     }
 })

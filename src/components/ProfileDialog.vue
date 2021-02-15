@@ -15,6 +15,10 @@
 
 <script>
 export default {
+  data(){
+    console.log(this.$store.state.profile);
+    return{}
+  },
   computed: {
     dialog: {
       get() {

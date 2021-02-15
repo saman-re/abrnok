@@ -120,13 +120,13 @@ export default {
         .then((res) => {
           this.loading = false;
           console.log(res.data);
+          this.$store.commit('profileSet',res.data)
           if (res.status == 200) {
             this.$router.push("/new_server");
           }
         })
         .catch((error) => {
           this.loading = false;
-          // console.log(error.response);
           if (error.response.status == 401&&this.form.password) {
             this.alerts[0].show = true;
           } else if (error.response.status == 500) {
