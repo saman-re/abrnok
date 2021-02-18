@@ -42,12 +42,12 @@
       v-show="accountBtn"
       @click="$store.commit('profDialogSwitch', true)"
     >
-      <v-badge color="deep-orange accent-4" bottom dot overlap v-if="true">
-        <v-icon class="blue--text text--darken-4">mdi-account-circle</v-icon>
-      </v-badge>
-      <v-icon class="blue--text text--darken-4" v-else
+      <v-icon class="blue--text text--darken-4" v-if="emailVerify"
         >mdi-account-circle</v-icon
       >
+      <v-badge color="deep-orange accent-4" bottom dot overlap v-else >
+        <v-icon class="blue--text text--darken-4">mdi-account-circle</v-icon>
+      </v-badge>
     </v-btn>
     <v-btn outlined class="grey lighten-3" :to="btnAdd">
       <span class="blue--text text--darken-4">{{ btnTxt }}</span>
@@ -64,6 +64,7 @@ export default {
       btnIcon: "",
       btnAdd: "",
       accountBtn: true,
+      emailVerify:this.$store.state.profile.emailVerified
     };
   },
   watch: {

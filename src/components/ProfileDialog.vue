@@ -6,7 +6,8 @@
           Profile
         </v-card-title>
         <v-card-text>
-            this is your profile
+            <div><span class="black--text">email:</span> {{profile.email}}</div>
+            <div><span class="black--text">user name:</span> {{profile.userName}}</div>
         </v-card-text>
       </v-card>
     </v-dialog>
@@ -17,7 +18,9 @@
 export default {
   data(){
     console.log(this.$store.state.profile);
-    return{}
+    return{
+      profile:this.$store.state.profile
+    }
   },
   computed: {
     dialog: {
