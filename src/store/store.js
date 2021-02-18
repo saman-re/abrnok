@@ -8,8 +8,8 @@ export const store=new Vuex.Store({
         navShow:true,
         dialogShow:false,
         profile:{
-            email:'',
-            userName:'',
+            email:localStorage.getItem("email"),
+            userName:localStorage.getItem("userName"),
             emailVerified:false,
             token:'',
         },
@@ -50,10 +50,15 @@ export const store=new Vuex.Store({
             // console.log(state.config);
         },
         profileSet(state,payload){
-            state.profile.email=payload.user.email;
-            state.profile.userName=payload.user.full_name;
-            state.profile.emailVerified=payload.user.is_email_verified;
+            let user=payload.user
+            state.profile.email=user.email;
+            state.profile.userName=user.full_name;
+            state.profile.emailVerified=user.is_email_verified;
             state.profile.token=payload.token
+            localStorage.setItem('email',user.email)
+            localStorage.setItem('userName',user.full_name)
+            localStorage.setItem("emailVerify",user.emailVerified)
+            localStorage.setItem('token',payload.token)
         }
     }
 })
