@@ -5,18 +5,22 @@
     @mousemove="cardEval = 15"
     @mouseleave="cardEval = 2"
     @click="changeLocation"
-    style="cursor:pointer,position: relative"
+    style="cursor:pointer,position:relative"
     max-width="350"
   >
-    <v-icon class="check_icon green--text" v-show="server.location == serverLocation">
+    <v-icon
+      class="check_icon green--text"
+      v-show="server.location == serverLocation"
+    >
       check_circle
     </v-icon>
-    <img
-      :src="`/img/${server.image}`"
-      :alt="server.location"
-      style="max-width:100%"
-      class="px-6"
-    />
+    <v-card-text class="d-flex justify-center">
+      <InlineSvg
+        :src="require(`@/assets/SVG/LocationSVG/${server.image}`)"
+        style="max-width:100%,margin:0 auto"
+        class="px-0"
+      ></InlineSvg>
+    </v-card-text>
     <v-card-text class="text-center font-weight-bold text-h6 text-darken-3">
       {{ server.location }}
     </v-card-text>
@@ -27,6 +31,7 @@
 </template>
 
 <script>
+import InlineSvg from "vue-inline-svg";
 export default {
   props: ["server"],
   data() {
@@ -43,6 +48,9 @@ export default {
     serverLocation() {
       return this.$store.state.server.location;
     },
+  },
+  components: {
+    InlineSvg,
   },
 };
 </script>

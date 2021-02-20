@@ -10,13 +10,12 @@
     <v-icon class="check_icon green--text" v-show="OS.name == serverOS">
       check_circle
     </v-icon>
-    <v-card-text>
-      <img
-        :src="`/img/${OS.image}`"
-        :alt="OS.name"
-        style="width:100%,margin:0 auto"
-        class="px-6 mt-4"
-      />
+    <v-card-text class="d-flex justify-center">
+      <InlineSvg
+        :src="require(`@/assets/SVG/OSSVG/${OS.image}`)"
+        style="max-width:100%,margin:0 auto"
+        class="px-0"
+      ></InlineSvg>
     </v-card-text>
     <v-card-text class="text-center">
       {{ OS.name }}
@@ -25,6 +24,7 @@
 </template>
 
 <script>
+import InlineSvg from "vue-inline-svg";
 export default {
   props: ["OS"],
   data() {
@@ -41,6 +41,9 @@ export default {
     serverOS() {
       return this.$store.state.server.os;
     },
+  },
+  components: {
+    InlineSvg,
   },
 };
 </script>

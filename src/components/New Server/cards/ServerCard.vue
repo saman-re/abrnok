@@ -10,12 +10,11 @@
     <v-icon class="check_icon green--text" v-show="server.title == serverType">
       check_circle
     </v-icon>
-    <img
-      :src="`/img/${server.image}`"
-      :alt="server.title"
+    <InlineSvg
+      :src="require(`@/assets/SVG/TypeSVG/${server.image}`)"
       style="max-width:100%,margin:0 auto"
       class="px-6 mt-4"
-    />
+    ></InlineSvg>
     <v-card-title>
       {{ server.title }}
     </v-card-title>
@@ -23,6 +22,7 @@
 </template>
 
 <script>
+import InlineSvg from "vue-inline-svg";
 export default {
   props: ["server"],
   data() {
@@ -40,12 +40,15 @@ export default {
       return this.$store.state.server.type;
     },
   },
+  components: {
+    InlineSvg,
+  },
 };
 </script>
 <style>
-.check_icon{
+.check_icon {
   position: absolute !important;
-  top:4px;
-  right:4px;
+  top: 4px;
+  right: 4px;
 }
 </style>

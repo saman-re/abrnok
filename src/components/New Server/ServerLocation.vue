@@ -26,7 +26,7 @@
     <v-card width="100%" flat class="mx-4 mt-7">
       <v-tabs-items v-model="tabs">
         <v-tab-item>
-          <v-row class="pt-4 pb-6">
+          <v-row class="pt-4 pb-8 px-5">
             <v-col
               cols="12"
               lg="3"
@@ -40,7 +40,7 @@
           </v-row>
         </v-tab-item>
         <v-tab-item>
-          <v-row class="pt-4 pb-6">
+          <v-row class="pt-4 pb-8 px-5">
             <v-col
               cols="12"
               lg="3"
@@ -54,7 +54,7 @@
           </v-row>
         </v-tab-item>
         <v-tab-item>
-          <v-row class="pt-4 pb-6">
+          <v-row class="pt-4 pb-8 px-5">
             <v-col
               cols="12"
               lg="3"
@@ -68,7 +68,7 @@
           </v-row>
         </v-tab-item>
         <v-tab-item>
-          <v-row class="pt-4 pb-6">
+          <v-row class="pt-4 pb-8 px-5">
             <v-col
               cols="12"
               lg="3"
@@ -82,7 +82,7 @@
           </v-row>
         </v-tab-item>
         <v-tab-item>
-          <v-row class="pt-4 pb-6">
+          <v-row class="pt-4 pb-8 px-5">
             <v-col
               lg="3"
               md="4"

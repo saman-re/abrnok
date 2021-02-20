@@ -1,19 +1,19 @@
 export const serversType = [
   {
     title: "Cloud Compute",
-    image: "Cloud_Compute.c75d6e60.svg",
+    image: "Cloud_Compute.svg",
   },
   {
     title: "Block Storage",
-    image: "Block_Storage.dbfce09d.svg",
+    image: "Block_Storage.svg",
   },
   {
     title: "Bare Metal",
-    image: "Bare_Metal.3562ac11.svg",
+    image: "Bare_Metal.svg",
   },
   {
     title: "Dedicated Cloud",
-    image: "Dedicated_Cloud.83e511ec.svg",
+    image: "Dedicated_Cloud.svg",
   },
 ];
 
@@ -22,78 +22,78 @@ export const serverLocations = {
     {
       location: "Atlanta",
       country: "United States",
-      image: "Atlanta.c3b74290.svg",
+      image: "NorthAmerica/Atlanta.svg",
     },
     {
       location: "Los Angeles",
       country: "United States",
-      image: "Los_Angeles.7a9785b5.svg",
+      image: "NorthAmerica/Los_Angeles.svg",
     },
     {
       location: "Torento",
       country: "Canada",
-      image: "Toronto.7b0c3bd9.svg",
+      image: "NorthAmerica/Toronto.svg",
     },
     {
       location: "Silicon Valley",
       country: "United States",
-      image: "Silicon_Valley.a976633f.svg",
+      image: "NorthAmerica/Silicon_Valley.svg",
     },
     {
       location: "New jersey",
       country: "United States",
-      image: "New_Jersey.10e37975.svg",
+      image: "NorthAmerica/New_Jersey.svg",
     },
     {
       location: "Dallas",
       country: "United States",
-      image: "Dallas.da9240d0.svg",
+      image: "NorthAmerica/Dallas.svg",
     },
   ],
   europe:[
     {
       location: "Amestrdam",
       country: "Netherlands",
-      image: "Amsterdam.d21c22d3.svg",
+      image: "Europe/Amsterdam.svg",
     },
     {
       location: "London",
       country: "United Kingdom",
-      image: "London.63dd7bcd.svg",
+      image: "Europe/London.svg",
     },
     {
       location: "Frankfurt",
       country: "Germany",
-      image: "Frankfurt.8e28ee09.svg",
+      image: "Europe/Frankfurt.svg",
     },
     {
       location: "Paris",
       country: "France",
-      image: "Paris.5c0fa787.svg",
+      image: "Europe/Paris.svg",
     },
   ],
   asia:[
     {
       location: "Tokyo",
       country: "Japan",
-      image: "Tokyo.5eeed999.svg",
+      image: "Asia/Tokyo.svg",
     },
     {
       location: "Seoul",
       country: "Korea,Republic of",
-      image: "Seoul.208c0c91.svg",
+      image: "Asia/Seoul.svg",
     },
     {
       location: "Singapore",
       country: "Singapore",
-      image: "Singapore.82e95bbe.svg",
+      image: "Asia/Singapore.svg",
     },
   ],
   australia:[
     {
       location: "Sydney",
       country: "Australia",
-      image: "Sydney.8cc2226f.svg",
+      image: "Australia/Sydney.svg",
     },
   ],
 };
@@ -136,26 +136,26 @@ export const serversConfig = [
 export const serverOSs = [
   {
     name: "Cent OS",
-    image: "CentOS.3417b9d4.svg",
+    image: "CentOS.svg",
   },
   {
     name: "Fedora Core OS",
-    image: "Fedora_CoreOS.82167d15.svg",
+    image: "Fedora_CoreOS.svg",
   },
   {
     name: "Debian",
-    image: "Debian.71bb6e54.svg",
+    image: "Debian.svg",
   },
   {
     name: "Fedora",
-    image: "Fedora.91a58d5a.svg",
+    image: "Fedora.svg",
   },
   {
     name: "Ubunto",
-    image: "Ubunto.d0c49d42.svg",
+    image: "Ubunto.svg",
   },
   {
     name: "Windows",
-    image: "Windows.efea2143.svg",
+    image: "Windows.svg",
   },
 ];
