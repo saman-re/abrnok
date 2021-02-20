@@ -6,9 +6,9 @@
     @mouseleave="cardEval = 2"
     @click="changeConfig"
     class="py-6"
-    style="cursor:pointer"
+    style="cursor:pointer,position: relative"
   >
-    <v-icon class="green--text" v-show="config == serverConfig">
+    <v-icon class="check_icon green--text" v-show="config == serverConfig">
       check_circle
     </v-icon>
     <v-card-text
@@ -60,14 +60,13 @@ export default {
   },
   methods: {
     changeConfig() {
-      this.$store.commit("changeConfig",this.config);
+      this.$store.commit("changeConfig", this.config);
     },
   },
   computed: {
     serverConfig() {
       return this.$store.state.server.config;
     },
-
   },
 };
 </script>

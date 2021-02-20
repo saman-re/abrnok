@@ -5,7 +5,7 @@
         <v-card-title class="text-headline">
           Profile
         </v-card-title>
-        <v-card-text>
+        <v-card-text class="font-weight-bold">
             <div><span class="black--text">email:</span> {{profile.email}}</div>
             <div><span class="black--text">user name:</span> {{profile.userName}}</div>
         </v-card-text>

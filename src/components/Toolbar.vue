@@ -49,7 +49,7 @@
         <v-icon class="blue--text text--darken-4">mdi-account-circle</v-icon>
       </v-badge>
     </v-btn>
-    <v-btn outlined class="grey lighten-3" @click="logout(btnTxt)" >
+    <v-btn outlined class="grey lighten-3" @click="logout()" >
       <span class="blue--text text--darken-4">{{ btnTxt }}</span>
       <v-icon right class="blue--text text--darken-4">{{ btnIcon }}</v-icon>
     </v-btn>
@@ -89,7 +89,7 @@ export default {
     },
   },
   methods:{
-    logout(txt){
+    logout(){
       if(this.btnTxt==="sign out"){
         localStorage.removeItem('email')
         localStorage.removeItem('userName')

@@ -5,9 +5,9 @@
     @mousemove="cardEval = 15"
     @mouseleave="cardEval = 2"
     @click="changeType"
-    style="cursor:pointer"
+    style="cursor:pointer,position: relative"
   >
-    <v-icon class="green--text" v-show="server.title == serverType">
+    <v-icon class="check_icon green--text" v-show="server.title == serverType">
       check_circle
     </v-icon>
     <img
@@ -42,3 +42,10 @@ export default {
   },
 };
 </script>
+<style>
+.check_icon{
+  position: absolute !important;
+  top:4px;
+  right:4px;
+}
+</style>

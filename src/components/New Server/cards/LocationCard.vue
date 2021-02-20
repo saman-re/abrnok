@@ -5,10 +5,10 @@
     @mousemove="cardEval = 15"
     @mouseleave="cardEval = 2"
     @click="changeLocation"
-    style="cursor:pointer"
+    style="cursor:pointer,position: relative"
     max-width="350"
   >
-    <v-icon class="green--text" v-show="server.location == serverLocation">
+    <v-icon class="check_icon green--text" v-show="server.location == serverLocation">
       check_circle
     </v-icon>
     <img
