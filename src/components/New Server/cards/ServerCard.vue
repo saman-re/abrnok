@@ -10,12 +10,14 @@
     <v-icon class="check_icon green--text" v-show="server.title == serverType">
       check_circle
     </v-icon>
+    <v-card-text class="d-flex justify-center">
     <InlineSvg
       :src="require(`@/assets/SVG/TypeSVG/${server.image}`)"
       style="max-width:100%,margin:0 auto"
       class="px-6 mt-4"
     ></InlineSvg>
-    <v-card-title>
+    </v-card-text>
+    <v-card-title class="d-flex justify-center">
       {{ server.title }}
     </v-card-title>
   </v-card>
